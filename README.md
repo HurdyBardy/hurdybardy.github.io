@@ -49,3 +49,33 @@
           <img src="https://img1.freepng.ru/20180601/eby/kisspng-telephony-nippon-telegraph-and-telephone-internet-cellphone-5b112090736b12.8087712615278491044728.jpg" alt="Image" height="42" width="42"><a href="tel:+1234567890">+1234567890</a> <br> <a href="tel:+1234567890">+0987654321</a>
         </li>
       </ul>
+<body>
+        <div class="main">
+            <h2>JavaScript Confirm Box</h2>
+            <button class="btn" onclick="myFunction()">Try it</button>
+            <ul id="demo">
+
+            </ul>
+        </div>
+        <script>
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            function myFunction() {
+                (async () => {
+                    let response = await fetch('https://kav-api.kovalev.team/servodrive/lastActualData?servoDriveId=1');
+                    let el = document.getElementById('demo')
+                    el.innerHTML = ""
+                    let text = await response.text(); // прочитать тело ответа как текст
+                    for (const [key, value] of Object.entries(JSON.parse(text)[0])) {
+                        const newEl = document.createElement("li")
+                        newEl.appendChild(document.createTextNode(`${key}: ${value}`))
+                        el.appendChild(newEl)
+                        await sleep(100)
+                    }
+                })()
+            }
+        </script>
+
+    </body>
+</html>	    
