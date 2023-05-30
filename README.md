@@ -2,7 +2,6 @@
  
 <head>
   <meta charset="UTF-8" />
-  <title></title>
 </head>
  
 <body>
@@ -50,8 +49,3 @@
           <img src="https://img1.freepng.ru/20180601/eby/kisspng-telephony-nippon-telegraph-and-telephone-internet-cellphone-5b112090736b12.8087712615278491044728.jpg" alt="Image" height="42" width="42"><a href="tel:+1234567890">+1234567890</a> <br> <a href="tel:+1234567890">+0987654321</a>
         </li>
       </ul>
- 
-    </div>
- 
-  </div>
-</body>
